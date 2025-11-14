@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Schubert</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script src="run.js"></script>
+    </head>
+    <body class="animate__animated animate__fadeIn">
+        <header>
+            <div class="header-box">
+                <h1>Try Schubert by yourself !</h1>
+            </div>
+
+            <nav class="menu">
+                <div class="menu-btn">
+                    <img src="assets/node5.png" alt="Menu" />
+                    <p>Menu</p>
+                </div>
+
+                <div class="menu-dropdown" id="menu-dropdown">
+                    <a href="homepage.html" data-hover="assets/node5.png">
+                        <img src="assets/node4.png" alt="home" />
+                        Home Page
+                    </a>
+                    <a href="otherprojects.html" data-hover="assets/node5.png">
+                        <img src="assets/node3.png" alt="home" />
+                        Other Projects
+                    </a>
+                    <a href="about.html" data-hover="assets/node5.png">
+                        <img src="assets/node2.png" alt="home" />
+                        About
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="content-block">
+                <h2>Upload your file</h2>
+            </div>
+            <div style="text-align: center">
+                <form
+                    id="upload-form"
+                    action="/process"
+                    method="post"
+                    enctype="multipart/form-data"
+                >
+                    <label for="file" class="submit-btn"
+                        >Choose a .mxl file</label
+                    >
+                    <input
+                        type="file"
+                        name="file"
+                        id="file"
+                        style="display: none"
+                        required
+                    />
+                    <br />
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="submit-btn"
+                        style="display: none"
+                    >
+                        Upload & Process
+                        <p style="color: black; line-height: 1.5">
+                            (Note: currently, nothing happens if you add a file
+                            and click "Upload & Process"; the goal was simply to
+                            create the visual part, the front-end.)
+                        </p>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="header-box">
+                <p>
+                    © 2025 SchuBERT. Developed by Lazar van Berchem, PSL
+                    University.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
